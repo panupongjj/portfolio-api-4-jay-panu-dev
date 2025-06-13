@@ -27,6 +27,6 @@ const projectSchema = new mongoose.Schema({
 });
 
 // MODEL: Provides database functionality "Add new user"
-const ProjectsList = mongoose.model("ProjectsList", projectSchema);
+const Project = mongoose.model("Project", projectSchema);
 
-exports.ProjectsList = ProjectsList;
+exports.Project = Project;

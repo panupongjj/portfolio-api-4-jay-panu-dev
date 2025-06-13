@@ -30,9 +30,10 @@ Example usage
 const project = {
   projectName: 'My Portfolio',
   technologiesHandles: {
-    frontend: ['React', 'Next.js'],
-    backend: 'Node.js',
-    database: { type: 'MongoDB', version: '5.0' }
+   languages: ["HTML", "Java"],
+   frameworks: ["Node.js", "Express"],
+   theories: ["Closure", "Singletons"],
+   databases: ["MongoDB"],
   },
   showCaseStatusHandles: {
     display: 'pined', // pined, hide, show

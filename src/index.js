@@ -7,7 +7,7 @@ const { urlencoded } = require("express");
 const configs = require("./configs");
 
 // Import router that been refactored
-//const catsRoute = require('./routes/catsRoute');
+const projectRoute = require("./routes/projectRoute");
 //const authRoute = require('./routes/authRoute');
 
 // Instance of express for us to use
@@ -27,17 +27,18 @@ app.use(urlencoded({ extended: false }));
 // app.get("/", (req, res) => {
 //   res.send("Respond from Index.js pages - none Refactor ");
 // });
-// ENDPOINT: Path of "/api/cat" & Method of POST
-// app.use("/api/cats", catsRoute);
+
+//ENDPOINT: Path of "/api/project" & Method of POST
+app.use("/api/project", projectRoute);
 // app.use("/api/auth", authRoute);
 
-// NOT FOUND ENDPOINT:
-// app.use((req, res) => {
-//   const err = new Error("404 - Resource Not Found");
-//   res.status(404).json({
-//     message: err.message,
-//   });
-// });
+//NOT FOUND ENDPOINT:
+app.use((req, res) => {
+  const err = new Error("404 - Resource Not Found");
+  res.status(404).json({
+    message: err.message,
+  });
+});
 
 // Port listener
 app.listen(configs.Port, () => {
