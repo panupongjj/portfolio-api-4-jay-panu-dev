@@ -1,6 +1,8 @@
 // Importing & instantiating express
-// General module import
 const express = require("express");
+const cors = require("cors");
+// General module import
+
 const { urlencoded } = require("express");
 const configs = require("./configs");
 
@@ -10,6 +12,7 @@ const configs = require("./configs");
 
 // Instance of express for us to use
 const app = express();
+app.use(cors());
 
 // Connection to DB
 const dbConnect = require("./utils/dbConnect");
