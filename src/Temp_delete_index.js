@@ -41,7 +41,7 @@ app.use((req, res) => {
   });
 });
 
-// Port listener
-app.listen(configs.Port, () => {
-  console.log(`Listening on port ${configs.Port} !!!~~`);
-});
+// // Port listener
+// app.listen(configs.Port, () => {
+//   console.log(`Listening on port ${configs.Port} !!!~~`);
+// });
