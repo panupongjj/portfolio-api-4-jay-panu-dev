@@ -4,18 +4,18 @@ const cors = require("cors");
 // General module import
 
 const { urlencoded } = require("express");
-const configs = require("./configs");
+const configs = require("../configs");
 
 // Import router that been refactored
-const projectRoute = require("./routes/projectRoute");
-const userRoute = require("./routes/userRoute");
+const projectRoute = require("../routes/projectRoute");
+const userRoute = require("../routes/userRoute");
 
 // Instance of express for us to use
 const app = express();
 app.use(cors());
 
 // Connection to DB
-const dbConnect = require("./utils/dbConnect");
+const dbConnect = require("../utils/dbConnect");
 dbConnect();
 
 // Middleware -- > all the tools that you want to use in yours project
