@@ -8,7 +8,7 @@ const configs = require("./configs");
 
 // Import router that been refactored
 const projectRoute = require("./routes/projectRoute");
-//const authRoute = require('./routes/authRoute');
+const userRoute = require("./routes/userRoute");
 
 // Instance of express for us to use
 const app = express();
@@ -28,9 +28,10 @@ app.use(urlencoded({ extended: false }));
 //   res.send("Respond from Index.js pages - none Refactor ");
 // });
 
-//ENDPOINT: Path of "/api/project" & Method of POST
+//ENDPOINT: Path of "/api/project"
 app.use("/api/project", projectRoute);
-// app.use("/api/auth", authRoute);
+//ENDPOINT: Path of "/api/user"
+app.use("/api/user", userRoute);
 
 //NOT FOUND ENDPOINT:
 app.use((req, res) => {
