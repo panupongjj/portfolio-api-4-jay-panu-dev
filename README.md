@@ -21,3 +21,10 @@ AUTHENTICATION USAGE
 
 git rm --cached .env
 git commit -m "Stop tracking .env"
+
+
+  "scripts": {
+    "dev": "vercel dev"
+    "dev": "nodemon src/index",
+    "build": "node src/index"
+  },
